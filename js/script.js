@@ -39,9 +39,6 @@ document.getElementById('coupon-code').addEventListener('keyup', function (event
     const code = event.target.value;
     const applyBtn = document.getElementById('apply-btn');
     const totalPrice = getTotalPrice();
-
-    console.log(code);
-    console.log(totalPrice);
     
     if ((code === 'SELL200') && (totalPrice >= 200)) {
         applyBtn.removeAttribute('disabled');
