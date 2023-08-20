@@ -1,41 +1,64 @@
 
 document.getElementById('first-card').addEventListener('click', function(){
-    const text = getTextValue('first-card');
-    setTextValue(text);
-   
+    showOutput('first-card');
 })
 
 document.getElementById('second-card').addEventListener('click', function(){
-    const text = getTextValue('second-card');
-    setTextValue(text);
+    showOutput('second-card');
+
 })
 
 document.getElementById('third-card').addEventListener('click', function(){
-    const text = getTextValue('third-card');
-    setTextValue(text);
+    showOutput('third-card');
 })
 document.getElementById('forth-card').addEventListener('click', function(){
-    const text = getTextValue('forth-card');
-    setTextValue(text);
+    showOutput('forth-card');
+
 })
 document.getElementById('fifth-card').addEventListener('click', function(){
-    const text = getTextValue('fifth-card');
-    setTextValue(text);
+    showOutput('fifth-card');
+    
 })
 document.getElementById('sixth-card').addEventListener('click', function(){
-    const text = getTextValue('sixth-card');
-    setTextValue(text);
+    showOutput('sixth-card');
 })
 document.getElementById('seventh-card').addEventListener('click', function(){
-    const text = getTextValue('seventh-card');
-    setTextValue(text);
+    showOutput('seventh-card');
+
 })
 document.getElementById('eighth-card').addEventListener('click', function(){
-    const text = getTextValue('eighth-card');;
-    setTextValue(text);
+    showOutput('eighth-card');
 })
 document.getElementById('ninth-card').addEventListener('click', function(){
-    const text = getTextValue('ninth-card');
-    setTextValue(text);
+    showOutput('ninth-card');
 })
+
+   
+
+document.getElementById('coupon-code').addEventListener('keyup', function (event) {
+    const code = event.target.value;
+    const applyBtn = document.getElementById('apply-btn');
+    const totalPrice = getTotalPrice();
+
+    console.log(code);
+    console.log(totalPrice);
+    
+    if ((code === 'SELL200') && (totalPrice >= 200)) {
+        applyBtn.removeAttribute('disabled');
+
+        applyBtn.addEventListener('click', function(){
+            const discountPrice = (totalPrice * 0.20).toFixed(2);
+            // const discount = discountPrice.toFixed(2);
+            const totalAmount = (totalPrice - discountPrice).toFixed(2);
+            setAmount('discount-field', discountPrice);
+            setAmount('total-field', totalAmount);
+
+        })
+        
+    } else {
+        applyBtn.setAttribute('disabled', true);
+    }
+
+})
+
 

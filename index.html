@@ -62,7 +62,7 @@
        <!-- first part -->
         <h1 class="text-4xl font-semibold mb-8">Kitchenware</h1>
         <div id="" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-14 ">
-          <div id="first-card" class="card hover:cursor-pointer bg-base-100    rounded-lg md:max-w-sm lg:max-w-sm shadow-xl  h-[350px]">
+          <div  id="first-card" class="card hover:cursor-pointer bg-base-100    rounded-lg md:max-w-sm lg:max-w-sm shadow-xl  h-[350px]">
             <figure class="bg-[#1111110d] mx-3 mt-3   items-center  h-[200px]">
               <img src="./images/prod1.png" alt="Shoes" class=" rounded-lg " />
             </figure>
@@ -280,26 +280,20 @@
      <!-- Input section -->
       <div class="  relative w-full md:w-2/6 lg:w-1/4 lg:mt-28 md:mt-28 md:max-w-xs lg:max-w-sm">
         <div class=" p-6 mb-6  bg-white rounded-lg">
-          <!-- <h1 class="text-2xl font-medium">Have coupon?</h1> -->
+        
           <div class="form-control">
             <label class="label">
               <span class="label-text text-xl lg:text-2xl font-medium">Have coupon?</span>
             </label>
             <div class="w-full flex">
-              <!-- <input type="text" placeholder="Coupon code"
-                class="input text-base md:text-sm w-2/3 font-normal text-[#11111166] input-bordered" />
-              <span  class="bg-[#E527B2]  rounded-none  "><button
-                  class="text-white  text-base hover:border  lg:text-xl font-semibold" disabled >Apply</button></span> -->
 
-              <input class=" border h-12  text-xl md:text-lg lg:text-xl pl-3  rounded-l-lg w-2/3 font-normal text-[#11111166] " type="text"
+              <input id="coupon-code" class=" border h-12  text-xl md:text-lg lg:text-xl pl-3  rounded-l-lg w-2/3 font-normal text-[#11111166] " type="text"
                 placeholder="Coupon code">
-              <button
+              <button id="apply-btn"
                 class="  h-12 w-1/3 bg-[#E527B2] rounded-r-lg text-xl font-semibold text-center  text-white " disabled >Apply</button>
 
             </div>
           </div>
-          <!-- <input class="w-48 h-12" type="text">
-          <button  class=" h-12 bg-[#E527B2] border-none rounded-r-lg text-xl font-semibold text-center  text-white px-7 hover:bg-[#c61898]">Apply</button> -->
         </div>
         <div class="  bg-white rounded-lg px-6 py-8  ">
           <div id="input-text" class="py-4  space-y-5 text-xl lg:text-2xl font-medium">
@@ -307,9 +301,9 @@
           </div>
           <div class="border-t border-b   py-8  space-y-5 text-xl lg:text-2xl font-medium ">
 
-            <p>Total price : <span class="text-[#11111180]"></span></p>
-            <p>Discount : <span class="text-[#11111180]"></span></p>
-            <p>Total : <span class="text-[#11111180]"></span></p>
+            <p>Total price : <span id="total-price" class="text-[#11111180]">00</span><span class="text-[#11111180]">Tk</span></p>
+            <p>Discount : <span id="discount-field" class="text-[#11111180]">00</span><span class="text-[#11111180]">Tk</span></p>
+            <p>Total : <span id="total-field" class="text-[#11111180]">00</span><span class="text-[#11111180]">Tk</span></p>
           </div>
         </div>
         <div class="absolute lg:w-4/5 ">
