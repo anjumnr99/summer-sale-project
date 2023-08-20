@@ -42,6 +42,7 @@ document.getElementById('coupon-code').addEventListener('keyup', function (event
     
     if ((code === 'SELL200') && (totalPrice >= 200)) {
         applyBtn.removeAttribute('disabled');
+        applyBtn.style.backgroundColor = '#E527B2';
 
         applyBtn.addEventListener('click', function(){
             const discountPrice = (totalPrice * 0.20).toFixed(2);
