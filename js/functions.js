@@ -65,6 +65,7 @@ function countTotalPrice(price){
 function setTotalPrice(totalPrice){
     const totalPriceField = document.getElementById('total-price');
     totalPriceField.innerText = totalPrice;
+    setAmount('total-field', totalPrice);
 }
 
 function setAmount(fieldId, setValue){
