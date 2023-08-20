@@ -1,8 +1,15 @@
 function showOutput(cardId){
     const text = getTextValue(cardId);
     setTextValue(text);
+
+    const makePurchaseBtn = document.getElementById('purchase-btn');
+    
+    makePurchaseBtn.removeAttribute('disabled');
+    
     const number = getNumberValue(cardId);
     countTotalPrice(number);
+
+
 
 }
 
@@ -39,14 +46,17 @@ function getNumberValue(fieldId){
 }
 
 function getTotalPrice(){
+    
     const totalPriceField = document.getElementById('total-price');
     const totalPriceString = totalPriceField.innerText;
     const totalPriceValue = parseFloat(totalPriceString);
+    
     return totalPriceValue;
 }
 
 function countTotalPrice(price){
     let totalPrice = getTotalPrice();
+    
     totalPrice = totalPrice + price;
     const totalPriceFloat = totalPrice.toFixed(2);
     setTotalPrice(totalPriceFloat);
