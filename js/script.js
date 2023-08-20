@@ -41,10 +41,14 @@ document.getElementById('coupon-code').addEventListener('keyup', function (event
     const totalPrice = getTotalPrice();
     
     if ((code === 'SELL200') && (totalPrice >= 200)) {
+
+        
         applyBtn.removeAttribute('disabled');
         applyBtn.style.backgroundColor = '#E527B2';
 
         applyBtn.addEventListener('click', function(){
+
+            event.target.value = '';
             const discountPrice = (totalPrice * 0.20).toFixed(2);
             // const discount = discountPrice.toFixed(2);
             const totalAmount = (totalPrice - discountPrice).toFixed(2);
